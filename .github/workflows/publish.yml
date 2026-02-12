@@ -59,7 +59,7 @@ jobs:
             <meta name="twitter:title" content="Provisioned share"/>
             <meta name="twitter:description" content="Provisioned DocC bundle share."/>
 
-            <meta http-equiv="refresh" content="0; url=${base_path}/documentation/declaw-provisioned/"/>
+            <meta http-equiv="refresh" content="0; url=${base_path}/documentation/index/"/>
           </head>
           <body>
             <p>Redirecting to documentation...</p>
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}documentation/declaw-provisioned/
+      url: ${{ steps.deployment.outputs.page_url }}documentation/index/
     steps:
       - name: Deploy
         id: deployment
