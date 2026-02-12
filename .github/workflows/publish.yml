@@ -37,7 +37,7 @@ jobs:
           repo_name="${GITHUB_REPOSITORY#*/}"
           base_path="/${repo_name}"
 
-          docc convert "great.docc" \
+          docc convert "index.docc" \
             --output-path "${output_root}" \
             --transform-for-static-hosting \
             --hosting-base-path "${base_path}"
@@ -59,7 +59,7 @@ jobs:
             <meta name="twitter:title" content="Provisioned share"/>
             <meta name="twitter:description" content="Provisioned DocC bundle share."/>
 
-            <meta http-equiv="refresh" content="0; url=${base_path}/documentation/great/"/>
+            <meta http-equiv="refresh" content="0; url=${base_path}/documentation/index/"/>
           </head>
           <body>
             <p>Redirecting to documentation...</p>
@@ -79,7 +79,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}documentation/great/
+      url: ${{ steps.deployment.outputs.page_url }}documentation/index/
     steps:
       - name: Deploy
         id: deployment
